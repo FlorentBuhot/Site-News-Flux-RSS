@@ -1,0 +1,151 @@
+/* Google Fonts Import Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+}
+
+.main{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #11101d;
+    padding: 6px 14px;
+}
+
+.head{
+    display: flex;
+    height: 10%;
+    width: 100%;
+    align-items: center;
+}
+
+.head .logo{
+    color: white;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+}
+
+.head .logo img{
+    border: solid white;
+}
+
+.head .logo .logo_name{
+    font-size: 20px;
+    font-weight: 400;
+    padding: 5px;
+}
+
+.coeur{
+    margin: 100px 0px;
+    text-align: center;
+    display: flex;
+}
+
+.login{
+    background-color: white;
+    width: 33%;
+    padding: 10px;
+}
+
+.connection{
+    color: black;
+}
+
+.input{
+    margin: 5px;
+}
+
+.vide{
+    width: 33%;
+}
+
+.bot{
+    background: white;
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.lien_droit{
+    left:0;
+    width: 33%;
+    margin: 5px;
+    text-decoration: none;
+    border: solid black;
+}
+.milieu{
+    width: 33%;
+    margin: 5px;
+    border: solid black;
+}
+.lien_gauche{
+    right:0;
+    width: 33%;
+    margin: 5px;
+    text-decoration: none;
+    border: solid black;
+}
+
+.lien_gauche_seul{
+    left:0;
+    width: 50%;
+    margin: 5px;
+    text-decoration: none;
+    border: solid black;
+}
+
+.milieu_seul{
+    width: 50%;
+    margin: 5px;
+    border: solid black;
+}
+
+.seul{
+    width: 100%;
+    margin: 5px;
+    border: solid black;
+}
+
+.admin{
+    position: fixed;
+    display: flex;
+    background: white;
+    text-align: center;
+    border: solid rgb(255, 0, 0);
+    width: 20%;
+    right: 0;
+    top: 0;
+    margin: 10px 10px 0px 0px;
+}
+
+.admin img{
+    margin: 5px 0px 0px 0px;
+}
+
+.admin a{
+    margin: 5px 5px 5px 25px;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    border: solid black;
+    color: black;
+}

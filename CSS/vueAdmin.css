@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+}
+
+.main{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    min-height: 500px;
+    min-width: 500px;
+    width: 100%;
+    background: #11101d;
+    padding: 6px 14px;
+}
+
+.head{
+    display: flex;
+    height: 10%;
+    width: 100%;
+    align-items: center;
+}
+
+.head .logo{
+    color: white;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+}
+
+.head .logo img{
+    border: solid white;
+}
+
+.head .logo .logo_name{
+    font-size: 20px;
+    font-weight: 400;
+    padding: 5px;
+}
+
+.admin{
+    position: fixed;
+    display: flex;
+    background: white;
+    text-align: center;
+    border: solid rgb(255, 0, 0);
+    width: 20%;
+    right: 0;
+    top: 0;
+    margin: 10px 10px 0px 0px;
+}
+
+.admin a{
+    margin: 5px;
+    text-decoration: none;
+    text-align: center;
+    border: solid black;
+    color: black;
+}
+
+.coeur{
+    margin: 30px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-color: white 11101d;
+    scrollbar-width: thin;
+}
+
+.vide{
+    height: 33%;
+}
+
+.milieu{
+    color: white;
+    height: 33%;
+}
+
+.Flux{
+    text-align:center;
+    margin: 5px;
+}
+
+.scroller{
+    margin: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-color: white 11101d;
+    scrollbar-width: thin;
+    height: 80%;
+}
+
+.nav_list{
+    margin: 5px;
+}
