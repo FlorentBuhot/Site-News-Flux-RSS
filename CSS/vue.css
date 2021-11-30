@@ -53,11 +53,48 @@ body{
     padding: 5px;
 }
 
-.main ul{
+.admin{
+    position: fixed;
+    display: flex;
+    background: white;
+    text-align: center;
+    border: solid rgb(255, 0, 0);
+    width: 20%;
+    right: 0;
+    top: 0;
+    margin: 10px 10px 0px 0px;
+}
+
+.admin a{
+    margin: 5px;
+    text-decoration: none;
+    text-align: center;
+    border: solid black;
+    color: black;
+}
+
+.mid{
+    margin: 30px 10px 10px 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-color: white 11101d;
+    scrollbar-width: thin;
+    height: 80%;
+}
+
+.news{
+    margin: 10px;
+}
+
+.news h2{
+    color: white;
+}
+
+.news ul{
     margin-top: 20px;
 }
 
-.main ul li{
+.news ul li{
     position: relative;
     display: flex;
     height: 40px;
@@ -66,11 +103,6 @@ body{
     list-style: none;
     line-height: 50px;
     color: white;
-}
-
-.lienImg{
-    width: 30px;
-    height: 30px;
 }
 
 .teteTab{
@@ -82,15 +114,21 @@ body{
     width: 100%;
 }
 
-.main ul li a{
+.lienImg{
+    width: 30px;
+    height: 30px;
+}
+
+.news ul li a{
     color: white;
     display: flex;
     align-items: center;
     text-decoration: none;
     border-radius: 12px;
+    width: 100%;
 }
 
-.main ul li a:hover{
+.news ul li a:hover{
     color: #11101d;
     background: white;
 }
@@ -112,8 +150,8 @@ body{
     width: 100%;
 }
 
-.nav_list a{
-    width: 100%;
+p{
+    color: white;
 }
 
 .bot{
@@ -181,34 +219,7 @@ body{
     border: solid black;
 }
 
-.admin{
-    position: fixed;
-    display: flex;
-    background: white;
-    text-align: center;
-    border: solid rgb(255, 0, 0);
-    width: 20%;
-    right: 0;
-    top: 0;
-    margin: 10px 10px 0px 0px;
-}
 
-.admin a{
-    margin: 5px;
-    text-decoration: none;
-    text-align: center;
-    border: solid black;
-    color: black;
-}
 
-.scroller{
-    overflow-x: hidden;
-    overflow-y: auto;
-    scrollbar-color: white 11101d;
-    scrollbar-width: thin;
-    height: 80%;
-}
 
-.mid{
-    height: 80%;
-}
+

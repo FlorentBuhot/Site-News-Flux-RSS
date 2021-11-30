@@ -22,30 +22,40 @@
                 </div>
             </div>
             <div class='mid'>
-                <ul>
-                    <li>
-                        <span class='teteTab'>Date</span>
-                        <span class='teteTab'>Site</span>
-                        <span class='teteTabDroit'>Titre</span>
-                    </li>
-                </ul>
-                <div class='scroller'>
+                <div class='news'>
+                    <h2>News : </h2>
+                    <?php if(isset($tnews)){?>
                     <ul>
-                        <?php 
-                        foreach($tnews as $row){ ?>
-                            <li class="nav_list">
-                                <a href=<?php echo $row->getUrl()?>>
-                                    <span class='date'>&nbsp<?php echo $row->getDate() ?></span>
-                                    <img class='lienImg' src='<?php echo $row->getLienImg()?>'>
-                                    <span class='nom'>&nbsp<?php echo $row->getNomSite() ?></span>
-                                    <span class='titre'>&nbsp<?php echo $row->getTitre()?></span>
-                                </a>
-                            </li>
-                        <?php
-                        }
-                        ?>
+                        <li>
+                            <span class='teteTab'>Date</span>
+                            <span class='teteTab'>Site</span>
+                            <span class='teteTabDroit'>Titre</span>
+                        </li>
                     </ul>
-                </diV>
+                    <div>
+                        <ul>
+                            <?php 
+                            foreach($tnews as $row){ ?>
+                                <li>
+                                    <a href=<?php echo $row->getUrl()?>>
+                                        <span class='date'>&nbsp<?php echo $row->getDate() ?></span>
+                                        <img class='lienImg' src='<?php echo $row->getLienImg()?>'>
+                                        <span class='nom'>&nbsp<?php echo $row->getNomSite() ?></span>
+                                        <span class='titre'>&nbsp<?php echo $row->getTitre()?></span>
+                                    </a>
+                                </li>
+                            <?php
+                            }
+                            ?>
+                        </ul>
+                    </diV>
+                    <?php 
+                    }
+                    else{
+                        echo '<p>Pas de News</p>';
+                    }
+                    ?>
+                </div>
             </div>
             <div class="bot">
                 <?php
