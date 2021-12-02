@@ -2,7 +2,7 @@
     require_once('../Classes/News.php');
     require_once('../Gateway-Connection/Connection.php');
     require_once('../Gateway-Connection/NewsGateway.php');
-    require_once('../Gateway-Connection/NbNewsPageGateway.php');
+    require_once('../Gateway-Connection/NbNewsPPageGW.php');
 
     class ModelNews{
         public function getNbNewsTot(){
@@ -15,12 +15,12 @@
             return $newsGW->nbNews();
         }
 
-        public function getNbNewsPage(){
+        public function getNbNewsPPage(){
             $base='mysql:host=localhost;dbname=newsbdd';
             $login='root';
             $mdp='';
             $newCon = new Connection($base,$login,$mdp);
-            $nbNPGW = new NbNewsPageGateway($newCon);
+            $nbNPGW = new NbNewsPPageGW($newCon);
             $newCon = NULL;
             return $nbNPGW->recupNbNewsPage();
         }

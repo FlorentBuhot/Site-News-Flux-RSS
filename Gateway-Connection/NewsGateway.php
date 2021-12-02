@@ -36,5 +36,11 @@
             $results = $this->con->getResults();
             return $results[0]['c'];
         }
+
+        public function supprimerNews($sup){
+            $query = 'DELETE FROM tnews WHERE id=:id';
+            $this->con->executeQuery($query,array(
+                ':id' => array($sup,PDO::PARAM_INT)));
+        }
     }
 ?>

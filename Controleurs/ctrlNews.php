@@ -16,12 +16,15 @@
     catch(PDOException $e){
         require('../Vues/vueErreur.php');
     }
+    catch(Exception $e){
+        require('../Vues/vueErreur.php');
+    }
 
     function afficherNews(){
         $mdlN = new ModelNews();
         $page = $_GET['page'];
         $nbNewsTot = $mdlN->getNbNewsTot();
-        $nbNewsPage = $mdlN->getNbNewsPage();
+        $nbNewsPage = $mdlN->getNbNewsPPage();
         $nbPageTot = ceil($nbNewsTot/$nbNewsPage);
         if(empty($page) || $page>$nbPageTot){
             $page = 1;

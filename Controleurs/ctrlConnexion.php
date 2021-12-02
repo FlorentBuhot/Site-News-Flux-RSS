@@ -6,14 +6,14 @@
         $login = $_POST['login'];
         $mdp = $_POST['mdp'];
 
-        $login = NettoyageLogin($login);
-        $mdp = NettoyageMdp($mdp);
+        $login = Nettoyage::NettoyageLogin($login);
+        $mdp = Nettoyage::NettoyageMdp($mdp);
 
 
         //insere($login,$mdp);
 
         if(ValidationAdmin($login,$mdp)){
-            require('../Script/scriptAdmin.php');
+            require('../Controleurs/ctrlAdmin.php');
         }
         else{
             $message = 'Mot de passe incorrect';

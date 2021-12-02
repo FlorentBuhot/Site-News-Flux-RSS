@@ -17,34 +17,31 @@
                 <div class='top_Droit'>
                     <div class='admin'>
                         <img src='../image/menu.png' width="50" height="50">
-                        <a href='../Script/script.php?page=1'>Menu principal</a>
+                        <a href='../Controleurs/ctrlNews.php?page=1'>Menu principal</a>
                     </div>
                 </div>
             </div>
             <div class="coeur">
-                <div class="vide">
-                </div>
                 <div class="milieu">
                     <h3>Nombre de News par page :</h3>
-                    <form action="scriptAdmin.php" method="get">
+                    <form action="ctrlAdmin.php?action=nbNewsPPage" method="post">
                         <input type="text" name="nbNewsPage">
-                        <input type="submit" name="submit" value="Valider">
+                        <input type="submit" name="submitNbNews" value="Valider">
                     </form>
                     <h3 class="Flux">Flux</h3> 
-                    <form class="scroller" action="../Script/scriptAdmin.php" method="post">
+                    <form class="scroller" action="ctrlAdmin.php?action=supprimer" method="post">
                             <?php
                             foreach($tnews as $row){ ?>
-                                    <input class="nav_list"  name='supprime' type="checkbox" value="<?php echo $row->getTitre()?>"> 
+                                    <input class="nav_list"  name='supr[]' type="checkbox" value="<?php echo $row->getId()?>">
                                     &nbsp<?php echo $row->getDate()?>
                                     &nbsp<?php echo $row->getNomSite()?>
                                     &nbsp<?php echo $row->getTitre()?></br>
                             <?php
                             }
                             ?>
-                        <input name="submit" type="submit" value="Supprimer">
+                            </br>
+                        <input type="submit" name="submitNews" value="Supprimer">
                     </form>
-                </div>
-                <div class="vide">
                 </div>
             </div>           
             <div class="bot">

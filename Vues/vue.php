@@ -64,19 +64,19 @@
                 <?php    
                 }
                 elseif($page == $nbPageTot){ ?>
-                    <a class='lien_droit_seul' href='script.php?page=<?php echo $page-1; ?>'><&nbsp Page &nbsp<?php echo $page-1?></a>
+                    <a class='lien_droit_seul' href='ctrlNews.php?page=<?php echo $page-1; ?>'><&nbsp Page &nbsp<?php echo $page-1?></a>
                     <h5 class='milieu_seul'>Page : &nbsp<?php echo $page;?>/<?php echo $nbPageTot?></h5>
                 <?php
                 }
                 elseif($page>1){?>
-                    <a class='lien_gauche' href='script.php?page=<?php echo $page-1; ?>'><&nbspPage &nbsp<?php echo $page-1?></a>
+                    <a class='lien_gauche' href='ctrlNews.php?page=<?php echo $page-1; ?>'><&nbspPage &nbsp<?php echo $page-1?></a>
                     <h5 class='milieu'>Page : &nbsp<?php echo $page;?>/<?php echo $nbPageTot?></h5>
-                    <a class='lien_droit' href="script.php?page=<?php echo $page+1; ?>">Page &nbsp<?php echo $page+1?>></a>
+                    <a class='lien_droit' href="ctrlNews.php?page=<?php echo $page+1; ?>">Page &nbsp<?php echo $page+1?>></a>
                 <?php
                 }
                 else{ ?>
                     <h5 class='milieu_seul'>Page : &nbsp<?php echo $page;?>/<?php echo $nbPageTot?></h5>
-                    <a  class='lien_gauche_seul' href="script.php?page=<?php echo $page+1; ?>">Page &nbsp<?php echo $page+1; ?>&nbsp></a>
+                    <a  class='lien_gauche_seul' href="ctrlNews.php?page=<?php echo $page+1; ?>">Page &nbsp<?php echo $page+1; ?>&nbsp></a>
                 <?php
                 }
                 ?>
