@@ -6,8 +6,8 @@
         $login = $_POST['login'];
         $mdp = $_POST['mdp'];
 
-        $login = Nettoyage::NettoyageLogin($login);
-        $mdp = Nettoyage::NettoyageMdp($mdp);
+        $login = Nettoyage::NettoyageCarac($login);
+        $mdp = Nettoyage::NettoyageCarac($mdp);
 
 
         //insere($login,$mdp);

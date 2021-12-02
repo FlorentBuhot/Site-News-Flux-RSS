@@ -11,7 +11,6 @@
             $mdp='';
             $newCon = new Connection($base,$login,$mdp);
             $newsGW = new NewsGateway($newCon);
-            $newCon = NULL;
             return $newsGW->nbNews();
         }
 
@@ -21,7 +20,6 @@
             $mdp='';
             $newCon = new Connection($base,$login,$mdp);
             $nbNPGW = new NbNewsPPageGW($newCon);
-            $newCon = NULL;
             return $nbNPGW->recupNbNewsPage();
         }
 
@@ -31,7 +29,6 @@
             $mdp='';
             $newCon = new Connection($base,$login,$mdp);
             $nbNPGW = new NewsGateway($newCon);
-            $newCon = NULL;
             return $nbNPGW->findNews($page,$nbNewsPage);
         }
     }

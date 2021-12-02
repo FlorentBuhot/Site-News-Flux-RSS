@@ -1,14 +1,8 @@
 <?php
 class Nettoyage{
-	public static function NettoyageLogin($login){
-		if (isset($login)){
-			return filter_var($login, FILTER_SANITIZE_STRING);
-		}
-	}
-	
-	public static function Nettoyagemdp($mdp) {
-		if (isset($mdp)) {
-			return filter_var($mdp, FILTER_SANITIZE_STRING);
+	public static function NettoyageCarac($chaine){
+		if (isset($chaine)){
+			return filter_var($chaine, FILTER_SANITIZE_STRING);
 		}
 	}
 	

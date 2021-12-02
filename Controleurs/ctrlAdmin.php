@@ -15,6 +15,9 @@
             case "supprimer":
                 supprimerNews();
                 break;
+            case "newNews":
+                ajouterNews();
+                break;
             default:
                 break;
         }
@@ -44,6 +47,19 @@
             $sup = $_POST['supr'];
             $mdlA = new ModelAdmin();
             $mdlA->supprimerNews($sup);
+            afficherNewsNbNewsPPage();
+        }
+    }
+
+    function ajouterNews(){
+        if(isset($_POST['submitNewNews'])){
+            $titre = Nettoyage::NettoyageCarac($_POST['titre']);
+            $url = Nettoyage::NettoyageCarac($_POST['url']);
+            $date = Nettoyage::NettoyageCarac($_POST['date']);
+            $nomSite = Nettoyage::NettoyageCarac($_POST['nomSite']);
+            $lienImg = Nettoyage::NettoyageCarac($_POST['lienImg']);
+            $mdlA = new ModelAdmin();
+            $mdlA->ajouterNews($titre,$url,$date,$nomSite,$lienImg);
             afficherNewsNbNewsPPage();
         }
     }

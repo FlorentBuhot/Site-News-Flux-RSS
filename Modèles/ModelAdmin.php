@@ -12,7 +12,6 @@
             $mdp='';
             $newCon = new Connection($base,$login,$mdp);
             $nbNPGW = new NewsGateway($newCon);
-            $newCon = NULL;
             return $nbNPGW->findNewsTotal();
         }
 
@@ -22,7 +21,6 @@
             $mdp='';
             $newCon = new Connection($base,$login,$mdp);
             $nbNPGW = new NbNewsPPageGW($newCon);
-            $newCon = NULL;
             return $nbNPGW->majNbNewsPage($nbNewsPage);
         }
 
@@ -32,10 +30,19 @@
             $mdp='';
             $newCon = new Connection($base,$login,$mdp);
             $nbNPGW = new NewsGateway($newCon);
-            $newCon = NULL;
             foreach ($sup as $news) {
                 $nbNPGW->supprimerNews($news);
             }
+        }
+
+        public function ajouterNews($titre,$url,$date,$nomSite,$lienImg){
+            $news = new News((int)NULL,$titre,$url,$date,$nomSite,$lienImg);
+            $base='mysql:host=localhost;dbname=newsbdd';
+            $login='root';
+            $mdp='';
+            $newCon = new Connection($base,$login,$mdp);
+            $newsGW = new NewsGateway($newCon);
+            $newsGW->inserer($news);
         }
     }
 ?>

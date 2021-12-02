@@ -7,7 +7,7 @@
         private string $nomSite;
         private string $lienImg;
 
-        public function __construct(string $id, string $url, string $titre, string $date,string $nomSite,string $lienImg){
+        public function __construct($id, $url, $titre, $date, $nomSite, $lienImg){
             $this->id = $id;
             $this->url = $url;
             $this->titre = $titre;

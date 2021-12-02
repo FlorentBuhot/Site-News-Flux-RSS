@@ -13,6 +13,7 @@ body{
     width: 100%;
     overflow: hidden;
     background-color: white;
+    height: 100%;
 }
 
 .main{
@@ -25,6 +26,10 @@ body{
     width: 100%;
     background: #11101d;
     padding: 6px 14px;
+}
+
+h3{
+    margin: 10px;
 }
 
 .head{
@@ -73,32 +78,51 @@ body{
 }
 
 .coeur{
-    margin: 30px;
+    margin: 10px;
+    color: white;
+    height: 80%;
     overflow-x: hidden;
     overflow-y: auto;
     scrollbar-color: white 11101d;
     scrollbar-width: thin;
+}   
+
+.nbNews{
+    margin: 10px;
 }
 
-.milieu{
+.listeFlux{
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.newNews{
+    margin: 10px;
+    margin-top: 50px;
+}
+
+table{
     color: white;
-    height: 80%;
 }
 
-.Flux{
-    text-align:center;
+.champs{
     margin: 5px;
 }
 
-.scroller{
+.newNewsForm{
+    color: white;
+}
+
+.input{
     margin: 10px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    scrollbar-color: white 11101d;
-    scrollbar-width: thin;
-    height: 80%;
+}
+
+.vide{
+    height: 10%;
 }
 
 .nav_list{
     margin: 5px;
 }
+
