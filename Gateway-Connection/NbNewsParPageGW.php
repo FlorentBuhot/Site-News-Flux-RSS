@@ -1,5 +1,5 @@
 <?php
-    class NbNewsPPageGW{
+    class NbNewsParPageGW{
         private $con;
 
         public function __construct(Connection $con){

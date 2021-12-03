@@ -4,20 +4,20 @@
     <head>
         <meta charset="UTF-8">
         <title>News</title>
-        <link href="../CSS/vueConnexion.css" rel="stylesheet">
+        <link href="CSS/vueConnexion.css" rel="stylesheet">
     </head>
 
     <body>
         <div class="main">
             <div class="head">
                 <div class="logo">
-                    <img src="../image/index.png" width="50" height="50">
+                    <img src="image/index.png" width="50" height="50">
                     <div class="logo_name">News</div>
                 </div>
                 <div class='top_Droit'>
                     <div class='admin'>
-                        <img src='../image/menu.png' width="50" height="50">
-                        <a href='../Controleurs/ctrlNews.php'>Menu principal</a>
+                        <img src='image/menu.png' width="50" height="50">
+                        <a href='Controleurs/CtrlNews.php'>Menu principal</a>
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                         echo $message;
                     }?>
                     </p>
-                    <form action="../Controleurs/ctrlConnexion.php" method="post">
+                    <form action="index.php" method="post">
                         <table>
                             <tr>
                                 <td>

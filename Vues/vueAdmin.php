@@ -4,20 +4,20 @@
     <head>
         <meta charset="UTF-8">
         <title>News</title>
-        <link href="../CSS/vueAdmin.css" rel="stylesheet">
+        <link href="CSS/vueAdmin.css" rel="stylesheet">
     </head>
 
     <body>
         <div class="main">
             <div class="head">
                 <div class="logo">
-                    <img src="../image/index.png" width="50" height="50">
+                    <img src="image/index.png" width="50" height="50">
                     <div class="logo_name">News</div>
                 </div>
                 <div class='top_Droit'>
                     <div class='admin'>
-                        <img src='../image/menu.png' width="50" height="50">
-                        <a href='../Controleurs/ctrlNews.php?page=1'>Menu principal</a>
+                        <img src='image/menu.png' width="50" height="50">
+                        <a href='../Controleurs/CtrlNews.php?page=1'>Menu principal</a>
                     </div>
                 </div>
             </div>
@@ -33,11 +33,17 @@
                         <h3>Flux : </h3> 
                         <form action="ctrlAdmin.php?action=supprimer" method="post">
                                 <?php
+                                if(isset($tnews)){
                                 foreach($tnews as $row){ ?>
                                         <input class="nav_list"  name='supr[]' type="checkbox" value="<?php echo $row->getId()?>">
                                         &nbsp<?php echo $row->getDate()?>
                                         &nbsp<?php echo $row->getNomSite()?>
                                         &nbsp<?php echo $row->getTitre()?></br>
+                                <?php
+                                }
+                                }
+                                else{?>
+                                    <h4>Pas de Flux</h4>
                                 <?php
                                 }
                                 ?>

@@ -1,10 +1,4 @@
 <?php
-    require_once('../Classes/Admin.php');
-    require_once('../Classes/News.php');
-    require_once('../Gateway-Connection/Connection.php');
-    require_once('../Gateway-Connection/NewsGateway.php');
-    require_once('../Gateway-Connection/NbNewsPPageGW.php');
-
     class ModelAdmin{
         public function findNewsTotal(){
             $base='mysql:host=localhost;dbname=newsbdd';
@@ -20,7 +14,7 @@
             $login='root';
             $mdp='';
             $newCon = new Connection($base,$login,$mdp);
-            $nbNPGW = new NbNewsPPageGW($newCon);
+            $nbNPGW = new NbNewsParPageGW($newCon);
             return $nbNPGW->majNbNewsPage($nbNewsPage);
         }
 

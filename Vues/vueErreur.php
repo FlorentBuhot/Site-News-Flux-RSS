@@ -27,7 +27,7 @@
                 </p>
             </div>
             <div class='bot'>
-                <a class='milieu_seul' href='../Controleurs/ctrlNews.php'>Retour à la page d'acceuil</a>
+                <a class='milieu_seul' href='../Controleurs/CtrlNews.php'>Retour à la page d'acceuil</a>
             </div>
         </div>
     </body>
