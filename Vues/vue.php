@@ -17,7 +17,7 @@
                 <div class='top_Droit'>
                     <div class='admin'>
                         <img src='image/logo_admin' width="50" height="50">
-                        <a href='Vues/vueConnexion.php'>Connexion administrateur</a>
+                        <a href='index.php?action=seConnecter'>Connexion administrateur</a>
                     </div>
                 </div>
             </div>

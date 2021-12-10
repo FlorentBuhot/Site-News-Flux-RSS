@@ -38,5 +38,36 @@
             $newsGW = new NewsGateway($newCon);
             $newsGW->inserer($news);
         }
+
+        public function connection($login, $mdp){
+            $base='mysql:host=localhost;dbname=newsbdd';
+            $loginbd='root';
+            $mdpbdd='';
+            $adminGW = new AdminGateway(new Connection($base,$loginbd,$mdpbdd));
+            $adminTest = $adminGW->recupAdmin($login);
+            if(password_verify($mdp, $adminTest[1])){
+                $_SESSION['role']='admin';
+                $_SESSION['login']=$login;
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
+        public function deconnexion(){
+            session_unset();
+            session_destroy();
+            $_SESSION = array();
+        }
+
+        public static function isAdmin(){
+            if(isset($_SESSION['login']) && isset($_SESSION['role'])){
+                $login = Nettoyage::NettoyageCarac($_SESSION['login']);
+                $role = Nettoyage::NettoyageCarac($_SESSION['role']);
+                return	new	Admin($login,$role);
+            }
+            else return null;
+        }
     }
 ?>

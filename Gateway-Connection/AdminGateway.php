@@ -13,11 +13,10 @@
             ));
             $results = $this->con->getResults();
             foreach ($results as $row){
-                $retour[] = new Admin($row['login'],$row['mdp']);
+                $retour[] = array($row['login'],$row['mdp'],'admin');
             }
             if(empty($retour)){
-                $message ='Login incorrect';
-                require('../Vues/vueConnexion.php');
+                return null;
             }
             else{
                 return $retour[0];

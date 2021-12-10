@@ -17,7 +17,7 @@
                 <div class='top_Droit'>
                     <div class='admin'>
                         <img src='image/menu.png' width="50" height="50">
-                        <a href='Controleurs/CtrlNews.php'>Menu principal</a>
+                        <a href='index.php'>Menu principal</a>
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                         echo $message;
                     }?>
                     </p>
-                    <form action="index.php" method="post">
+                    <form action="index.php?action=seConnecter" method="post">
                         <table>
                             <tr>
                                 <td>

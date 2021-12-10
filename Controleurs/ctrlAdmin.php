@@ -11,7 +11,7 @@
                 switch ($action)
                 {
                     case NULL:
-                        $this->connection();
+                        require_once($rep.$vues['erreur']);
                         break;
                     case 'afficher':
                         $this->afficherNewsNbNewsPPage();
@@ -24,6 +24,12 @@
                         break;
                     case "newNews":
                         $this->ajouterNews();
+                        break;
+                    case "seConnecter":
+                        $this->connection();
+                        break;
+                    case "seDeconnecter":
+                        $this->deconnexion();
                         break;
                     default:
                         break;
@@ -80,32 +86,29 @@
         }
     }
 
-        public function connection()
-        {
+        public function connection(){
             global $rep,$vues;
-            if (isset($_POST['submit']))
-            {
-                $login = $_POST['login'];
-                $mdp = $_POST['mdp'];
-
-                $login = Nettoyage::NettoyageCarac($login);
-                $mdp = Nettoyage::NettoyageCarac($mdp);
-
+            if (isset($_POST['submit'])){
+                $login = Nettoyage::NettoyageCarac($_POST['login']);
+                $mdp = Nettoyage::NettoyageCarac($_POST['mdp']);
                 //insere($login,$mdp);
-
-                if (Validation::ValidationAdmin($login, $mdp))
-                {
+                $mdlA = new ModelAdmin();
+                if ($mdlA->connection($login, $mdp)){
                     $this->afficherNewsNbNewsPPage();
                 }
-
                 else{
-                    $message = 'Mot de passe incorrect';
+                    $message = 'Un des champs est    incorrect';
                     require($rep.$vues['vueConec']);
                 }
             }
             else{
                 require($rep.$vues['vueConec']);
             }
+        }
+
+        public function deconnexion(){
+            $mdlA = new ModelAdmin();
+            $mdlA->deconnexion();
         }
 }
 ?>

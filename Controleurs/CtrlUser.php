@@ -1,5 +1,5 @@
 <?php
-    class CtrlNews
+    class CtrlUser
     {
         public function __construct()
         {

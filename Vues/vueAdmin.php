@@ -17,21 +17,21 @@
                 <div class='top_Droit'>
                     <div class='admin'>
                         <img src='image/menu.png' width="50" height="50">
-                        <a href='../Controleurs/CtrlNews.php?page=1'>Menu principal</a>
+                        <a href='index.php?action=seDeconnecter'>Menu principal</a>
                     </div>
                 </div>
             </div>
             <div class="coeur">
                     <div class="nbNews">
                         <h3>Nombre de News par page :</h3>
-                        <form action="ctrlAdmin.php?action=nbNewsPPage" method="post">
+                        <form action="index.php?action=nbNewsPPage" method="post">
                             <input type="text" name="nbNewsPage">
                             <input type="submit" name="submitNbNews" value="Valider">
                         </form>
                     </div>
                     <div class="listeFlux">
-                        <h3>Flux : </h3> 
-                        <form action="ctrlAdmin.php?action=supprimer" method="post">
+                        <h3>Flux : </h3>
+                        <form action="index.php?action=supprimer" method="post">
                                 <?php
                                 if(isset($tnews)){
                                 foreach($tnews as $row){ ?>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="newNews">
                         <h3>Insérer un Flux : </h3>
-                        <form class="newNewsForm" action="ctrlAdmin.php?action=newNews" method="post">
+                        <form class="newNewsForm" action="index.php?action=newNews" method="post">
                             <table>
                                 <tr>
                                     <td>Titre :</td>

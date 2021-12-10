@@ -1,11 +1,11 @@
 <?php
     class Admin{
         private string $login;
-        private string $mdp;
+        private string $role;
 
-        public function __construct(string $login, string $mdp){
+        public function __construct(string $login, string $mdp, string $role){
             $this->login = $login;
-            $this->mdp = $mdp;
+            $this->role = $role;
         }
     
         public function getLogin(){
@@ -15,13 +15,15 @@
         public function setLogin(string $login){
             $this->login =$login;
         }
-    
-        public function getMdp(){
-            return $this->mdp;
+
+        public function getRole(): string
+        {
+            return $this->role;
         }
-    
-        public function setmdp(string $mdp){
-            $this->mdp =$mdp;
+
+        public function setRole(string $role): void
+        {
+            $this->role = $role;
         }
     }
 ?>
