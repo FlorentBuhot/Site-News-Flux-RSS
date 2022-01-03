@@ -3,24 +3,18 @@
 class FrontControleur{
     function __construct()
     {
-        $listeAction = array(
-            'admin' => array('afficher','nbNewsPPage','supprimer','newNews','seConnecter','seDeconnecter'),
-            'user' => array()
-        );
+        global $rep,$vues;
+        $listeActionAdmin = array('afficher','nbNewsPPage','supprimer','newNews','seConnecter','seDeconnecter');
+
+        session_start();
 
         try {
             $admin = ModelAdmin::isAdmin();
             $test = false;
-
-            $action = $_GET['action'];
-            foreach ($listeAction['admin'] as $actionA){
-                if($action == $actionA){
-                    $test = true;
-                }
-            }
-            if($test == true){
+            $action = Nettoyage::NettoyageCarac($_REQUEST['action']);
+            if(in_array($action,$listeActionAdmin)){
                 if($admin == null){
-                    $action = 'seConnecter';
+                    $_REQUEST['action'] = 'seConnecter';
                     new CtrlAdmin();
                 }
                 else{
@@ -31,7 +25,8 @@ class FrontControleur{
                 new CtrlUser();
             }
         }
-        catch (Exception $e){
+        catch (Exception | PDOException $e){
+            require($rep.$vues['erreur']);
         }
     }
 }

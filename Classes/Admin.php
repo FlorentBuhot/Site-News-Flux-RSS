@@ -3,11 +3,15 @@
         private string $login;
         private string $role;
 
-        public function __construct(string $login, string $mdp, string $role){
+        /**
+         * @param string $login
+         * @param string $role
+         */
+        public function __construct(string $login, string $role){
             $this->login = $login;
             $this->role = $role;
         }
-    
+        
         public function getLogin(){
             return $this->login;
         }

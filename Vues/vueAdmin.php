@@ -64,7 +64,7 @@
                                     <td><input class="champs" type="text" name="url"></td>
                                 </tr>
                                 <tr>
-                                    <td>Date () :</td>
+                                    <td>Date :</td>
                                     <td><input class="champs" type="date" name="date"></td>
                                 </tr>
                                 <tr>

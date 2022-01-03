@@ -4,23 +4,23 @@
         public function __construct()
         {
             global $rep,$vues;
-            $action = $_GET['action'];
+            $action = Nettoyage::NettoyageCarac($_REQUEST['action']);
             try {
                 switch ($action) {
                     case NULL:
+                    default:
                         $this->afficherNews();
                         break;
-                    default:
-                        break;
                 }
-            } catch (PDOException $e) {
-                require($rep.$vues['erreur']);
-            } catch (Exception $e) {
+            } catch (PDOException | Exception $e) {
                 require($rep.$vues['erreur']);
             }
         }
 
-            function afficherNews(){
+        /**
+         * Appèle le modèle pour afficher les news en fonction du nombre de news par page dans la base de données
+         */
+        function afficherNews(){
                 global $rep,$vues;
                 $mdlN = new ModelNews();
                 $page = $_GET['page'];

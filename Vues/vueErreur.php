@@ -23,7 +23,13 @@
                 <h2>Une erreur est survenue</h2>
                 <p>
                 </br></br></br>
-                    <?php print($e->getMessage());?>
+                    <?php
+                    if(isset($e)) {
+                        print($e->getMessage());
+                    }
+                    else{
+                        print("Une erreur inattendue est apparue");
+                    }?>
                 </p>
             </div>
             <div class='bot'>

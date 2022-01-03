@@ -7,19 +7,16 @@
         }
 
         public function recupAdmin(string $login){
-            $query = 'SELECT * FROM admin WHERE login=:login';
+            $query = 'SELECT mdp FROM admin WHERE login=:login';
             $this->con->executeQuery($query,array(
                 ':login'=>array($login,PDO::PARAM_STR)
             ));
             $results = $this->con->getResults();
-            foreach ($results as $row){
-                $retour[] = array($row['login'],$row['mdp'],'admin');
-            }
-            if(empty($retour)){
+            if(empty($results)){
                 return null;
             }
             else{
-                return $retour[0];
+                return $results[0]['mdp'];
             }
         }
 

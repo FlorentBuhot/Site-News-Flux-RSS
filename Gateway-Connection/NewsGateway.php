@@ -6,7 +6,7 @@
             $this->con=$con;
         }
 
-        public function findNewsTotal(){
+        public function findAllNews(){
             $query = 'SELECT * FROM tnews';
             $this->con->executeQuery($query,array());
             $results = $this->con->getResults();
@@ -43,12 +43,12 @@
                 ':id' => array($sup,PDO::PARAM_INT)));
         }
 
-        public function inserer($news){
+        public function inseretNews($news){
             $query = "INSERT INTO tnews VALUES(':titre',':url',NULL,':date',':nomSite',':lienImg')";
             $this->con->executeQuery($query,array(
                 ':titre'=>array($news->getTitre(),PDO::PARAM_STR),
                 ':url'=>array($news->getUrl(),PDO::PARAM_STR),
-                ':date'=>array(date('Y-m-d',$news->getDate()),PDO::PARAM_STR),
+                ':date'=>array($news->getDate(),PDO::PARAM_STR),
                 ':nomSite'=>array($news->getNomSite(),PDO::PARAM_STR),
                 ':lienImg'=>array($news->getLienImg(),PDO::PARAM_STR)
             ));
