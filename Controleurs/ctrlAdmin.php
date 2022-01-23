@@ -87,8 +87,6 @@
             $titre = Nettoyage::NettoyageCarac($_POST['titre']);
             $url = Nettoyage::NettoyageCarac($_POST['url']);
             $date = Nettoyage::NettoyageCarac($_POST['date']);
-            echo $date;
-            //$date = Nettoyage::NettoyageCarac($_POST['date']);
             $nomSite = Nettoyage::NettoyageCarac($_POST['nomSite']);
             $lienImg = Nettoyage::NettoyageCarac($_POST['lienImg']);
             $mdlA = new ModelAdmin();

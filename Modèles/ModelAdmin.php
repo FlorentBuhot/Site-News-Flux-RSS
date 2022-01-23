@@ -28,7 +28,7 @@
             $news = new News((int)NULL,$titre,$url,$date,$nomSite,$lienImg);
             $newCon = new Connection($base,$login,$mdp);
             $newsGW = new NewsGateway($newCon);
-            $newsGW->inseretNews($news);
+            $newsGW->insertNews($news);
         }
 
         public function connection($loginA, $mdpA){

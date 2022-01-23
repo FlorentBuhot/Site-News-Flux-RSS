@@ -16,7 +16,8 @@
             $this->lienImg = $lienImg;
         }
 
-        public function getId(){
+        public function getId(): int
+        {
             return $this->id;
         }
 
@@ -24,7 +25,8 @@
             $this->id = $id;
         }
 
-        public function getUrl(){
+        public function getUrl(): string
+        {
             return $this->url;
         }
 
@@ -32,7 +34,8 @@
             $this->url = $url;
         }
 
-        public function getTitre(){
+        public function getTitre(): string
+        {
             return $this->titre;
         }
 
@@ -40,7 +43,8 @@
             $this->titre = $titre;
         }
 
-        public function getDate(){
+        public function getDate(): string
+        {
             return $this->date;
         }
 
@@ -48,7 +52,8 @@
             $this->date = $date;
         }
 
-        public function getLienImg(){
+        public function getLienImg(): string
+        {
             return $this->lienImg;
         }
 
@@ -56,7 +61,8 @@
             $this->lienImg = $lienImg;
         }
 
-        public function getNomSite(){
+        public function getNomSite(): string
+        {
             return $this->nomSite;
         }
 
